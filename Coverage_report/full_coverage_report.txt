@@ -1,0 +1,864 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /TOP_axi4/axi_inf
+=== Design Unit: work.axi4_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       5         5         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/TOP_axi4/axi_inf/AWADDR_handshake
+                     axi4_interface.sv(88)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/WDATA_handshake
+                     axi4_interface.sv(90)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/WRESP_handshake
+                     axi4_interface.sv(92)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/ARADDR_handshake
+                     axi4_interface.sv(94)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/RDATA_handshake
+                     axi4_interface.sv(96)              0     257649     782952          2    1040603          0           1 off
+
+=================================================================================
+=== Instance: /TOP_axi4/TB
+=== Design Unit: work.my_TB
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/TOP_axi4/TB/generate_stim/immed__34
+                     my_TB.sv(34)                       0       2000          0          0       2000          0           0 off
+
+=================================================================================
+=== Instance: /axi4_class
+=== Design Unit: work.axi4_class
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses         27        na        na        na
+            Covergroup Bins         65        65         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /axi4_class/axi4_pkt/cg                         100.00%        100          -    Covered              
+    covered/total bins:                                    65         65          -                      
+    missing/total bins:                                     0         65          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint master_AWvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_AWready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261650          1          -    Covered              
+        bin zero                                       261650          1          -    Covered              
+    Coverpoint master_Wvalid                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint slave_Wready                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint W_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bvalid_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bready_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint W_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_addr_min                                  25524          1          -    Covered              
+        bin w_addr_low                                 101600          1          -    Covered              
+        bin w_addr_mid                                 236808          1          -    Covered              
+        bin w_addr_high                                134596          1          -    Covered              
+        bin w_addr_max                                  24772          1          -    Covered              
+    Coverpoint W_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_w                               0                     -    ZERO                 
+        bin w_size                                     523300          1          -    Covered              
+    Coverpoint w_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_len_min                                     660          1          -    Covered              
+        bin w_len_low                                   47036          1          -    Covered              
+        bin w_len_mid                                  140554          1          -    Covered              
+        bin w_len_high                                 281902          1          -    Covered              
+        bin w_len_max                                   53148          1          -    Covered              
+    Coverpoint w_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       522768          1          -    Covered              
+        bin slverr                                        532          1          -    Covered              
+    Coverpoint master_ARvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_ARready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261651          1          -    Covered              
+        bin zero                                       261649          1          -    Covered              
+    Coverpoint master_Rready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint slave_Rvalid                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint R_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          4000          1          -    Covered              
+        bin zero                                       519300          1          -    Covered              
+    Coverpoint R_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_addr_min                                  25444          1          -    Covered              
+        bin r_addr_low                                 112618          1          -    Covered              
+        bin r_addr_mid                                 230630          1          -    Covered              
+        bin r_addr_high                                125418          1          -    Covered              
+        bin r_addr_max                                  29190          1          -    Covered              
+    Coverpoint R_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_r                               0                     -    ZERO                 
+        bin r_size                                     523300          1          -    Covered              
+    Coverpoint r_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_len_min                                   28438          1          -    Covered              
+        bin r_len_low                                  151786          1          -    Covered              
+        bin r_len_mid                                  144746          1          -    Covered              
+        bin r_len_high                                 170430          1          -    Covered              
+        bin r_len_max                                   27900          1          -    Covered              
+    Coverpoint r_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       378385          1          -    Covered              
+        bin slverr                                     144915          1          -    Covered              
+    Cross W_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr                                     2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_handshake                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin write_start                            255650          1          -    Covered              
+            bin write_end                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    265650                     -    Occurred             
+    Cross Bresp_check                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin resp_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_boundary                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                         1          1          -    Covered              
+            bin max_                                     2580          1          -    Covered              
+            bin mid_                                     8750          1          -    Covered              
+            bin min_                                       30          1          -    Covered              
+    Cross R_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross read_handshake                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin read_start                             255650          1          -    Covered              
+            bin read_end                                 4000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    263650                     -    Occurred             
+    Cross read_boundary                               100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                       748          1          -    Covered              
+            bin max_                                       95          1          -    Covered              
+            bin mid_                                     5615          1          -    Covered              
+            bin min_                                     1690          1          -    Covered              
+ Covergroup instance \/axi4_class::axi4_pkt::cg       100.00%        100          -    Covered              
+    covered/total bins:                                    65         65          -                      
+    missing/total bins:                                     0         65          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint master_AWvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_AWready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261650          1          -    Covered              
+        bin zero                                       261650          1          -    Covered              
+    Coverpoint master_Wvalid                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint slave_Wready                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint W_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bvalid_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bready_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint W_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_addr_min                                  25524          1          -    Covered              
+        bin w_addr_low                                 101600          1          -    Covered              
+        bin w_addr_mid                                 236808          1          -    Covered              
+        bin w_addr_high                                134596          1          -    Covered              
+        bin w_addr_max                                  24772          1          -    Covered              
+    Coverpoint W_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_w                               0                     -    ZERO                 
+        bin w_size                                     523300          1          -    Covered              
+    Coverpoint w_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_len_min                                     660          1          -    Covered              
+        bin w_len_low                                   47036          1          -    Covered              
+        bin w_len_mid                                  140554          1          -    Covered              
+        bin w_len_high                                 281902          1          -    Covered              
+        bin w_len_max                                   53148          1          -    Covered              
+    Coverpoint w_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       522768          1          -    Covered              
+        bin slverr                                        532          1          -    Covered              
+    Coverpoint master_ARvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_ARready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261651          1          -    Covered              
+        bin zero                                       261649          1          -    Covered              
+    Coverpoint master_Rready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint slave_Rvalid                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint R_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          4000          1          -    Covered              
+        bin zero                                       519300          1          -    Covered              
+    Coverpoint R_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_addr_min                                  25444          1          -    Covered              
+        bin r_addr_low                                 112618          1          -    Covered              
+        bin r_addr_mid                                 230630          1          -    Covered              
+        bin r_addr_high                                125418          1          -    Covered              
+        bin r_addr_max                                  29190          1          -    Covered              
+    Coverpoint R_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_r                               0                     -    ZERO                 
+        bin r_size                                     523300          1          -    Covered              
+    Coverpoint r_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_len_min                                   28438          1          -    Covered              
+        bin r_len_low                                  151786          1          -    Covered              
+        bin r_len_mid                                  144746          1          -    Covered              
+        bin r_len_high                                 170430          1          -    Covered              
+        bin r_len_max                                   27900          1          -    Covered              
+    Coverpoint r_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       378385          1          -    Covered              
+        bin slverr                                     144915          1          -    Covered              
+    Cross W_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr                                     2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_handshake                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin write_start                            255650          1          -    Covered              
+            bin write_end                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    265650                     -    Occurred             
+    Cross Bresp_check                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin resp_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_boundary                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                         1          1          -    Covered              
+            bin max_                                     2580          1          -    Covered              
+            bin mid_                                     8750          1          -    Covered              
+            bin min_                                       30          1          -    Covered              
+    Cross R_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross read_handshake                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin read_start                             255650          1          -    Covered              
+            bin read_end                                 4000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    263650                     -    Occurred             
+    Cross read_boundary                               100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                       748          1          -    Covered              
+            bin max_                                       95          1          -    Covered              
+            bin mid_                                     5615          1          -    Covered              
+            bin min_                                     1690          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /axi4_class/axi4_pkt/cg                         100.00%        100          -    Covered              
+    covered/total bins:                                    65         65          -                      
+    missing/total bins:                                     0         65          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint master_AWvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_AWready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261650          1          -    Covered              
+        bin zero                                       261650          1          -    Covered              
+    Coverpoint master_Wvalid                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint slave_Wready                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint W_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bvalid_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bready_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint W_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_addr_min                                  25524          1          -    Covered              
+        bin w_addr_low                                 101600          1          -    Covered              
+        bin w_addr_mid                                 236808          1          -    Covered              
+        bin w_addr_high                                134596          1          -    Covered              
+        bin w_addr_max                                  24772          1          -    Covered              
+    Coverpoint W_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_w                               0                     -    ZERO                 
+        bin w_size                                     523300          1          -    Covered              
+    Coverpoint w_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_len_min                                     660          1          -    Covered              
+        bin w_len_low                                   47036          1          -    Covered              
+        bin w_len_mid                                  140554          1          -    Covered              
+        bin w_len_high                                 281902          1          -    Covered              
+        bin w_len_max                                   53148          1          -    Covered              
+    Coverpoint w_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       522768          1          -    Covered              
+        bin slverr                                        532          1          -    Covered              
+    Coverpoint master_ARvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_ARready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261651          1          -    Covered              
+        bin zero                                       261649          1          -    Covered              
+    Coverpoint master_Rready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint slave_Rvalid                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint R_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          4000          1          -    Covered              
+        bin zero                                       519300          1          -    Covered              
+    Coverpoint R_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_addr_min                                  25444          1          -    Covered              
+        bin r_addr_low                                 112618          1          -    Covered              
+        bin r_addr_mid                                 230630          1          -    Covered              
+        bin r_addr_high                                125418          1          -    Covered              
+        bin r_addr_max                                  29190          1          -    Covered              
+    Coverpoint R_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_r                               0                     -    ZERO                 
+        bin r_size                                     523300          1          -    Covered              
+    Coverpoint r_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_len_min                                   28438          1          -    Covered              
+        bin r_len_low                                  151786          1          -    Covered              
+        bin r_len_mid                                  144746          1          -    Covered              
+        bin r_len_high                                 170430          1          -    Covered              
+        bin r_len_max                                   27900          1          -    Covered              
+    Coverpoint r_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       378385          1          -    Covered              
+        bin slverr                                     144915          1          -    Covered              
+    Cross W_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr                                     2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_handshake                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin write_start                            255650          1          -    Covered              
+            bin write_end                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    265650                     -    Occurred             
+    Cross Bresp_check                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin resp_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_boundary                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                         1          1          -    Covered              
+            bin max_                                     2580          1          -    Covered              
+            bin mid_                                     8750          1          -    Covered              
+            bin min_                                       30          1          -    Covered              
+    Cross R_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross read_handshake                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin read_start                             255650          1          -    Covered              
+            bin read_end                                 4000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    263650                     -    Occurred             
+    Cross read_boundary                               100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                       748          1          -    Covered              
+            bin max_                                       95          1          -    Covered              
+            bin mid_                                     5615          1          -    Covered              
+            bin min_                                     1690          1          -    Covered              
+ Covergroup instance \/axi4_class::axi4_pkt::cg       100.00%        100          -    Covered              
+    covered/total bins:                                    65         65          -                      
+    missing/total bins:                                     0         65          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint master_AWvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_AWready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261650          1          -    Covered              
+        bin zero                                       261650          1          -    Covered              
+    Coverpoint master_Wvalid                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint slave_Wready                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        257650          1          -    Covered              
+        bin zero                                       265650          1          -    Covered              
+    Coverpoint W_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bvalid_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint Bready_cv                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint W_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_addr_min                                  25524          1          -    Covered              
+        bin w_addr_low                                 101600          1          -    Covered              
+        bin w_addr_mid                                 236808          1          -    Covered              
+        bin w_addr_high                                134596          1          -    Covered              
+        bin w_addr_max                                  24772          1          -    Covered              
+    Coverpoint W_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_w                               0                     -    ZERO                 
+        bin w_size                                     523300          1          -    Covered              
+    Coverpoint w_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w_len_min                                     660          1          -    Covered              
+        bin w_len_low                                   47036          1          -    Covered              
+        bin w_len_mid                                  140554          1          -    Covered              
+        bin w_len_high                                 281902          1          -    Covered              
+        bin w_len_max                                   53148          1          -    Covered              
+    Coverpoint w_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       522768          1          -    Covered              
+        bin slverr                                        532          1          -    Covered              
+    Coverpoint master_ARvalid                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          2000          1          -    Covered              
+        bin zero                                       521300          1          -    Covered              
+    Coverpoint slave_ARready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        261651          1          -    Covered              
+        bin zero                                       261649          1          -    Covered              
+    Coverpoint master_Rready                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint slave_Rvalid                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                        259650          1          -    Covered              
+        bin zero                                       263650          1          -    Covered              
+    Coverpoint R_last                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin one                                          4000          1          -    Covered              
+        bin zero                                       519300          1          -    Covered              
+    Coverpoint R_address_regions                      100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_addr_min                                  25444          1          -    Covered              
+        bin r_addr_low                                 112618          1          -    Covered              
+        bin r_addr_mid                                 230630          1          -    Covered              
+        bin r_addr_high                                125418          1          -    Covered              
+        bin r_addr_max                                  29190          1          -    Covered              
+    Coverpoint R_burst_length                         100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegal_r                               0                     -    ZERO                 
+        bin r_size                                     523300          1          -    Covered              
+    Coverpoint r_len                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r_len_min                                   28438          1          -    Covered              
+        bin r_len_low                                  151786          1          -    Covered              
+        bin r_len_mid                                  144746          1          -    Covered              
+        bin r_len_high                                 170430          1          -    Covered              
+        bin r_len_max                                   27900          1          -    Covered              
+    Coverpoint r_resp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin okay                                       378385          1          -    Covered              
+        bin slverr                                     144915          1          -    Covered              
+    Cross W_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr                                     2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_handshake                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin write_start                            255650          1          -    Covered              
+            bin write_end                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    265650                     -    Occurred             
+    Cross Bresp_check                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin resp_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross write_boundary                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                         1          1          -    Covered              
+            bin max_                                     2580          1          -    Covered              
+            bin mid_                                     8750          1          -    Covered              
+            bin min_                                       30          1          -    Covered              
+    Cross R_addr_handshake                            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin addr_done                                2000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    521300                     -    Occurred             
+    Cross read_handshake                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin read_start                             255650          1          -    Covered              
+            bin read_end                                 4000          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin ignore_zeros                    263650                     -    Occurred             
+    Cross read_boundary                               100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin max                                       748          1          -    Covered              
+            bin max_                                       95          1          -    Covered              
+            bin mid_                                     5615          1          -    Covered              
+            bin min_                                     1690          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/TOP_axi4/axi_inf/AWADDR_handshake
+                     axi4_interface.sv(88)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/WDATA_handshake
+                     axi4_interface.sv(90)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/WRESP_handshake
+                     axi4_interface.sv(92)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/ARADDR_handshake
+                     axi4_interface.sv(94)              0       2000    1038601          2    1040603          0           1 off
+/TOP_axi4/axi_inf/RDATA_handshake
+                     axi4_interface.sv(96)              0     257649     782952          2    1040603          0           1 off
+/TOP_axi4/TB/generate_stim/immed__34
+                     my_TB.sv(34)                       0       2000          0          0       2000          0           0 off
+
+Total Coverage By Instance (filtered view): 100.00%
+
